@@ -1,0 +1,6 @@
+[project]
+name = "customer_churn_analytics"
+version = "0.1.0"
+
+[tool.setuptools]
+packages = ["src"]
