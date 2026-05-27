@@ -144,6 +144,30 @@ def plot_scatter(
     plt.ylabel(ylabel)
 
     plt.show()
+
+
+def plot_bar(
+    df,
+    x,
+    y,
+    title,
+    xlabel,
+    ylabel,
+    figsize=(10, 5)
+):
+    setup_plot(figsize)
+
+    sns.barplot(
+        data=df,
+        x=x,
+        y=y
+    )
+
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+
+    plt.show()
 # -------------------------------------------
 
 def plot_churn_by_tenure(df: pd.DataFrame):
