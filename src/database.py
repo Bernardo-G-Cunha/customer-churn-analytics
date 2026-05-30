@@ -1,7 +1,6 @@
 import sqlite3
 import pandas as pd
-
-from src.config import DATA_DIR, SQL_DIR
+from src.config import DATA_DIR
 
 DB_PATH = DATA_DIR / "customer_churn.db"
 
@@ -15,14 +14,6 @@ def run_query(query):
     conn.close()
 
     return df
-
-
-def run_sql_file(filename):
-
-    with open(SQL_DIR / filename, "r") as file:
-        query = file.read()
-    
-    return run_query(query)
 
 
 def load_customers():
