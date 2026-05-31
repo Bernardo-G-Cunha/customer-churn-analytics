@@ -133,3 +133,30 @@ def plot_bar(
     plt.ylabel(ylabel)
 
     plt.show()
+
+
+def plot_heatmap(
+    df,
+    title,
+    xlabel,
+    ylabel,
+    figsize=(10, 6),
+    annot=True,
+    fmt=".1f",
+    cmap="RdYlGn_r"
+):
+
+    setup_plot(figsize)
+
+    sns.heatmap(
+        df,
+        annot=annot,
+        fmt=fmt,
+        cmap=cmap
+    )
+
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+
+    plt.show()
