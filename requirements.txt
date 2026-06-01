@@ -1,0 +1,4 @@
+matplotlib==3.10.9
+pandas==3.0.3
+seaborn==0.13.2
+-e git+https://github.com/Bernardo-G-Cunha/customer-churn-analytics.git@c07d517ab4d2b45bb7601f401b33440157234e47#egg=customer_churn_analytics
