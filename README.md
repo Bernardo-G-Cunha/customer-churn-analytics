@@ -6,7 +6,7 @@ This project analyzes customer churn behavior to identify key drivers and segmen
 
 The analysis focuses on customer tenure, pricing, service adoption, payment behavior, and household characteristics.
 
-Rather than focusing on complex predictive modeling, the emphasis is on behavioral interpretation and business-oriented segmentation.
+Rather than focusing on complex predictive modeling, the emphasis is on behavioral interpretation, business-oriented segmentation, and dashboard-based reporting.
 
 ---
 
@@ -20,18 +20,23 @@ The main objective of this project is to understand which customer profiles are 
 
 The project is organized into three main notebooks:
 
-- `01_data_cleaning.ipynb`  
+* `01_data_cleaning.ipynb`
   Data preprocessing, handling missing values, and feature preparation.
 
-- `02_eda.ipynb`  
+* `02_eda.ipynb`
   Exploratory data analysis of key variables such as tenure, charges, services, and churn distribution. This notebook uses SQL queries connected to a local database.
 
-- `03_churn_analysis.ipynb`  
+* `03_churn_analysis.ipynb`
   Interaction analysis, feature engineering, and customer segmentation based on behavioral and structural attributes.
 
-Additionally, a supporting script is used to initialize the local database required for SQL-based analysis.
+Additionally, the project includes an interactive Power BI dashboard summarizing the main findings and customer risk patterns.
 
-- `src/create_database.py`  
+* `dashboard/churn_dashboard.pbix`
+  Interactive business-oriented dashboard for churn monitoring and customer segmentation.
+
+A supporting script is also used to initialize the local database required for SQL-based analysis.
+
+* `src/create_database.py`
   Creates and populates the local database used in notebooks `02` and `03`.
 
 ---
@@ -44,7 +49,7 @@ Before running the analysis notebooks, the environment must be properly set up.
 
 ```bash
 pip install -r requirements.txt
-````
+```
 
 ---
 
@@ -69,6 +74,22 @@ Execute the notebooks in the following order:
 3. `03_churn_analysis.ipynb`
 
 Each step builds upon the previous one, moving from raw data preparation to exploratory analysis and finally to customer segmentation.
+
+---
+
+## Dashboard
+
+The project includes a Power BI dashboard focused on executive-level churn monitoring and customer risk segmentation.
+
+The dashboard summarizes the main analytical findings through:
+
+* churn KPIs
+* customer lifecycle analysis
+* pricing segmentation
+* service adoption patterns
+* interaction heatmaps between tenure and pricing groups
+
+The dashboard was designed to prioritize clarity, segmentation logic, and business interpretability rather than visual complexity.
 
 ---
 
@@ -144,6 +165,7 @@ These features allow for a more structured analysis of customer behavior and chu
 * Seaborn
 * Jupyter Notebook
 * SQLite (local database)
+* Power BI
 
 ---
 
